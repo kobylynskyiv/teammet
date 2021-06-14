@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.teammate.ui.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+
+        <action
+            android:id="@+id/action_profile_to_findGame"
+            app:destination="@id/findGameFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cityFragment"
+        android:name="com.example.teammate.ui.city.CityFragment"
+        tools:layout="@layout/fragment_city" >
+
+        <action
+            android:id="@+id/action_cityFragment_to_findGame"
+            app:destination="@id/findGameFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/findGameFragment"
+        android:name="com.example.teammate.ui.find.FindGameFragment"
+        tools:layout="@layout/fragment_find">
+
+        <action
+            android:id="@+id/action_findGame_to_profile"
+            app:destination="@id/profileFragment" />
+
+        <action
+            android:id="@+id/action_findGame_to_cityFragment"
+            app:destination="@id/cityFragment" />
+
+        <action
+            android:id="@+id/action_findGame_to_foundGame"
+            app:destination="@id/foundGameFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/foundGameFragment"
+        android:name="com.example.teammate.ui.find.FoundGameFragment"
+        tools:layout="@layout/fragment_found" />
+
+</navigation>

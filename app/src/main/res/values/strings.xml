@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Teammate</string>
+
+    <string name="profile_find_game">Найти игру</string>
+    <string name="profile_create_game">Создать игру</string>
+    <string name="description_content">Not found image</string>
+    <string name="profile_not_found_game">У вас пока нет игр</string>
+</resources>
