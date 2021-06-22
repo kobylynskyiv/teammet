@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    tools:context=".ui.create.CreateGameFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Шаг 2/3: Выберете время и место"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txName"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Город*"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background"
+            android:focusableInTouchMode="false"
+            android:textColorHint="@color/black"
+            android:touchscreenBlocksFocus="true"
+            app:boxBackgroundColor="@color/background"
+            app:boxBackgroundMode="outline"
+            app:boxCollapsedPaddingTop="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="1dp"
+            app:errorTextColor="@color/black"
+            app:expandedHintEnabled="false"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat"
+            app:layout_constraintTop_toBottomOf="@+id/txName2"
+            tools:ignore="HardcodedText"
+            tools:layout_editor_absoluteX="10dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tyCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:nextFocusRight="@+id/tySport"
+                android:nextFocusDown="@+id/tySport" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txNam3e2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Место*"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/edSport" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edSport"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background"
+            android:focusableInTouchMode="false"
+            android:textColorHint="@color/black"
+            android:touchscreenBlocksFocus="true"
+            app:boxBackgroundColor="@color/background"
+            app:boxBackgroundMode="outline"
+            app:boxCollapsedPaddingTop="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="1dp"
+            app:errorTextColor="@color/black"
+            app:expandedHintEnabled="false"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat"
+            app:layout_constraintTop_toBottomOf="@+id/txName"
+            tools:ignore="HardcodedText"
+            tools:layout_editor_absoluteX="10dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tyPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:minLines="1"
+                android:nextFocusRight="@+id/tySport"
+                android:nextFocusDown="@+id/tySport" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/txName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Дата*"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/edSport" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edSp3ort"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background"
+            android:focusableInTouchMode="false"
+            android:textColorHint="@color/black"
+            android:touchscreenBlocksFocus="true"
+            app:boxBackgroundColor="@color/background"
+            app:boxBackgroundMode="outline"
+            app:boxCollapsedPaddingTop="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="1dp"
+            app:errorTextColor="@color/black"
+            app:expandedHintEnabled="false"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat"
+            app:layout_constraintTop_toBottomOf="@+id/txName"
+            tools:ignore="HardcodedText"
+            tools:layout_editor_absoluteX="10dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tyDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+                android:minLines="1"
+                android:nextFocusRight="@+id/tySport"
+                android:nextFocusDown="@+id/tySport" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            android:text="Заполните все обязательные поля"
+            android:textColor="#FF0000" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goTo3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="#262626"
+        android:text="Далее"
+        android:layout_marginBottom="20dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

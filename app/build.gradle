@@ -46,7 +46,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
     implementation "io.reactivex.rxjava3:rxjava:3.0.13"
-    
+    implementation 'com.itlgl:iosdialog:1.0.1'
     implementation 'com.google.code.gson:gson:2.8.7'
     implementation 'com.google.firebase:firebase-firestore:23.0.1'
 

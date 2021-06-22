@@ -33,7 +33,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:text="player12345"
+                android:text=""
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 

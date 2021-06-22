@@ -1,6 +1,7 @@
 package com.example.teammate.ui.find
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.os.Bundle
 import android.os.Parcel
 import android.os.Parcelable
@@ -8,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.NumberPicker
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
@@ -40,25 +42,24 @@ class FindGameFragment : Fragment(), ISelectedCity {
         val title : TextView = requireActivity().findViewById(R.id.toolbar_title)
         title.text = "Найти игру"
 
-        val cats = arrayOf("Футбол", "Волейбол", "Баскетбол", "Хоккей")
-        binding.numberPicker.minValue = 0
-        binding.numberPicker.maxValue = 3
-        binding.numberPicker.displayedValues = cats
-
-
         val navigation = Navigation.findNavController(view)
 
-        binding.sport.setOnTouchListener { _, _ ->
-            binding.numberPicker.visibility = View.VISIBLE
-            binding.button.visibility = View.VISIBLE
-            true
-        }
+        binding.sport.setOnClickListener {
+            val dialogBuilder: AlertDialog.Builder = AlertDialog.Builder(requireContext())
+            val inflater = this.layoutInflater
+            val dialogView: View = inflater.inflate(R.layout.item_sport, null)
+            dialogBuilder.setView(dialogView)
+            val cats = arrayOf("Футбол", "Волейбол", "Баскетбол", "Хоккей")
+            val numberPicker = dialogView.findViewById<View>(R.id.numberPicker) as NumberPicker
+            numberPicker.minValue = 0
+            numberPicker.maxValue = 3
+            numberPicker.displayedValues = cats
 
-        binding.button.setOnClickListener {
-            binding.numberPicker.visibility = View.GONE
-            binding.button.visibility = View.GONE
-            binding.sport.setText(cats[binding.numberPicker.value])
-
+            dialogBuilder.setPositiveButton("Выбрать") { dialog, _ ->
+                binding.sport.setText(cats[numberPicker.value])
+                dialog.dismiss()
+            }
+            dialogBuilder.show()
         }
 
         binding.city.setOnTouchListener { _, _ ->

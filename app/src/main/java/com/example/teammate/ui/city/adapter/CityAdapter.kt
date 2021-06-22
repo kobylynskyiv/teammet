@@ -6,15 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.teammate.R
+import com.example.teammate.ui.create.CreateGameFragment2
 import com.example.teammate.ui.find.FindGameFragment
+import com.example.teammate.ui.find.ItemGameEditFragment
 import java.util.*
 import kotlin.collections.ArrayList
 
 
-class CityAdapter(private val inflater: LayoutInflater, private val items: ArrayList<CityItems>, private val view: View, private val fragment: FindGameFragment?, private val previousItems: ArrayList<CityItems>) : RecyclerView.Adapter<CityAdapter.ViewHolder>() {
+class CityAdapter(private val inflater: LayoutInflater, private val items: ArrayList<CityItems>, private val view: View, private val fragment: Fragment?, private val previousItems: ArrayList<CityItems>) : RecyclerView.Adapter<CityAdapter.ViewHolder>() {
 
 
 
@@ -31,7 +34,18 @@ class CityAdapter(private val inflater: LayoutInflater, private val items: Array
 
         holder.selected.setOnClickListener {
             view.findNavController().navigateUp()
-            fragment?.selectedCity(item, fragment.view)
+
+            when (fragment) {
+                is CreateGameFragment2 -> {
+                    fragment.selectedCity(item, fragment.view)
+                }
+                is ItemGameEditFragment -> {
+                    fragment.selectedCity(item, fragment.view)
+                }
+                else -> {
+                    (fragment as FindGameFragment).selectedCity(item, fragment.view)
+                }
+            }
         }
 
     }

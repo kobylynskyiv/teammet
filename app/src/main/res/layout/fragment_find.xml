@@ -7,18 +7,6 @@
     android:background="@color/background"
     tools:context=".ui.find.FindGameFragment">
 
-    <NumberPicker
-        android:id="@+id/numberPicker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editTextSport"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -41,7 +29,6 @@
         app:boxCornerRadiusTopStart="10dp"
         app:boxStrokeWidth="1dp"
         android:focusableInTouchMode="false"
-
         app:boxStrokeWidthFocused="1dp"
         app:errorTextColor="@color/black"
         app:expandedHintEnabled="false"
@@ -110,7 +97,6 @@
         android:background="@drawable/circle"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
-
         android:backgroundTint="#262626"
         android:text="@string/profile_find_game"
         android:textAllCaps="false"
@@ -121,17 +107,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:visibility="gone"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_select"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/editTextSport"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberPicker" />
 
     <TextView
         android:id="@+id/error"
@@ -140,9 +115,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:textSize="12sp"
-        android:text="* Заполните все поля"
+        android:text="Заполните все обязательные поля"
         android:layout_marginStart="20dp"
-        android:textColor="@android:color/holo_red_dark"
+        android:textColor="#FF0000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextCity" />
 

@@ -1,15 +1,15 @@
 package com.example.teammate.ui.find.adapter
 
-import com.example.teammate.ui.city.adapter.CityItems
+import java.io.Serializable
 
 class FoundItems(
-    var city: HashMap<*,*>,
-    var comments: String = "",
-    var createdId: String = "",
-    var date: String = "",
+    var city: HashMap<*,*>?,
+    var comment: String = "",
+    var creatorId: String = "",
+    var date: com.google.firebase.Timestamp,
     var gameId: String = "",
     var location: String = "",
-    var members: ArrayList<MembersGames>,
+    var members: ArrayList<String>,
     var sport: String = "",
     var title: String = ""
-)
+): Serializable
