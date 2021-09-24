@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "903809284630",
+    "project_id": "teammeet-1a2ee",
+    "storage_bucket": "teammeet-1a2ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903809284630:android:4b5eaf096e72439caed337",
+        "android_client_info": {
+          "package_name": "com.kobylynskyiv.teammeet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "903809284630-2uemicib45id60qf8il9uem84telokf0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kobylynskyiv.teammeet",
+            "certificate_hash": "ce8bc824cea65df342a70d1c3a0efb4cfe2efd79"
+          }
+        },
+        {
+          "client_id": "903809284630-o9eqkhjp9bml8sdpukt3k349n8scdlgv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWG-ZrlgoI77Hu6VpyJaZlLeV6awoUS0Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "903809284630-o9eqkhjp9bml8sdpukt3k349n8scdlgv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
