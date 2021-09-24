@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/background"
     android:layout_height="match_parent"
-    tools:context=".ui.profile.ProfileFragment">
+    tools:context=".presenter.ui.profile.ProfileFragment">
 
 
     <TextView
@@ -45,43 +45,35 @@
         app:layout_constraintTop_toBottomOf="@+id/myGame"
         tools:listitem="@layout/item_games" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/findGame"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:background="@drawable/circle"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:backgroundTint="#262626"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/circle_button_find"
+        android:backgroundTint="#322727"
         android:textAllCaps="false"
-        android:text="@string/profile_find_game"
-        app:layout_constraintBottom_toTopOf="@+id/createGame"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_find"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/createGame"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:textColor="@color/white"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/circle_button_create"
+        android:backgroundTint="#2A332A"
+        android:src="@drawable/ic_create"
         android:textAllCaps="false"
-        android:textSize="15sp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/circle"
-        android:backgroundTint="#262626"
-        android:text="@string/profile_create_game"
+        android:scaleType="centerInside"
+        android:textColor="@color/white"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/img"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/sadman"
@@ -95,7 +87,8 @@
     <TextView
         android:id="@+id/notFound"
         android:layout_width="wrap_content"
-        android:visibility="gone"
+        android:visibility="visible"
+        android:fontFamily="@font/montserrat"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="@string/profile_not_found_game"

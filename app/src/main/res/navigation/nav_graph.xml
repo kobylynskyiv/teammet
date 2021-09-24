@@ -7,43 +7,27 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.teammate.ui.profile.ProfileFragment"
+        android:label="Головна"
+        android:name="com.kobylynskyiv.teammeet.presenter.ui.profile.ProfileFragment"
         tools:layout="@layout/fragment_profile">
 
         <action
             android:id="@+id/action_profile_to_findGame"
             app:destination="@id/findGameFragment" />
         <action
-            android:id="@+id/action_profileFragment_to_itemGameFragment"
-            app:destination="@id/itemGameFragment" />
-        <action
             android:id="@+id/action_profileFragment_to_createGameFragment"
             app:destination="@id/createGameFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/cityFragment"
-        android:name="com.example.teammate.ui.city.CityFragment"
-        tools:layout="@layout/fragment_city" >
-
-        <action
-            android:id="@+id/action_cityFragment_to_findGame"
-            app:destination="@id/findGameFragment" />
-
-    </fragment>
-
-    <fragment
         android:id="@+id/findGameFragment"
-        android:name="com.example.teammate.ui.find.FindGameFragment"
+        android:label="Пошук гри"
+        android:name="com.kobylynskyiv.teammeet.presenter.ui.find.FindGameFragment"
         tools:layout="@layout/fragment_find">
 
         <action
             android:id="@+id/action_findGame_to_profile"
             app:destination="@id/profileFragment" />
-
-        <action
-            android:id="@+id/action_findGame_to_cityFragment"
-            app:destination="@id/cityFragment" />
 
         <action
             android:id="@+id/action_findGame_to_foundGame"
@@ -52,63 +36,25 @@
     </fragment>
     <fragment
         android:id="@+id/foundGameFragment"
-        android:name="com.example.teammate.ui.find.FoundGameFragment"
+        android:label="Ігри"
+        android:name="com.kobylynskyiv.teammeet.presenter.ui.found.FoundGameFragment"
         tools:layout="@layout/fragment_found" >
         <action
-            android:id="@+id/action_foundGameFragment_to_itemGameFragment"
-            app:destination="@id/itemGameFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/itemGameFragment"
-        android:name="com.example.teammate.ui.find.ItemGameFragment"
-        tools:layout="@layout/fragment_item_game" >
-        <action
-            android:id="@+id/action_itemGameFragment_to_foundGameFragment"
-            app:destination="@id/foundGameFragment" />
-        <action
-            android:id="@+id/action_itemGameFragment_to_itemGameEditFragment"
-            app:destination="@id/itemGameEditFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/itemGameEditFragment"
-        android:name="com.example.teammate.ui.find.ItemGameEditFragment"
-        tools:layout="@layout/fragment_edit_game">
-    <action
-            android:id="@+id/action_itemGameEditFragment_to_itemGameFragment"
-            app:destination="@id/itemGameFragment" />
-        <action
-            android:id="@+id/action_itemGameEditFragment_to_cityFragment"
-            app:destination="@id/cityFragment" />
-        <action
-            android:id="@+id/action_itemGameEditFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_foundGameFragment_to_cardFragment"
+            app:destination="@id/cardFragment" />
     </fragment>
     <fragment
         android:id="@+id/createGameFragment"
-        android:name="com.example.teammate.ui.create.CreateGameFragment"
-        tools:layout="@layout/fragment_create_game_1" >
-        <action
-            android:id="@+id/action_createGameFragment_to_createGameFragment2"
-            app:destination="@id/createGameFragment2" />
-    </fragment>
+        android:label="Створення гри"
+        android:name="com.kobylynskyiv.teammeet.presenter.ui.create.CreateGameFragment"
+        tools:layout="@layout/fragment_create_game_1" />
     <fragment
-        android:id="@+id/createGameFragment2"
-        android:name="com.example.teammate.ui.create.CreateGameFragment2"
-        tools:layout="@layout/fragment_create_game_2"  >
+        android:id="@+id/cardFragment"
+        android:name="com.kobylynskyiv.teammeet.presenter.ui.cards.CardFragment"
+        android:label="Запити на гру">
         <action
-            android:id="@+id/action_createGameFragment2_to_createGameFragment3"
-            app:destination="@id/createGameFragment3" />
-        <action
-            android:id="@+id/action_createGameFragment2_to_cityFragment"
-            app:destination="@id/cityFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/createGameFragment3"
-        android:name="com.example.teammate.ui.create.CreateGameFragment3"
-        tools:layout="@layout/fragment_create_game_3" >
-        <action
-            android:id="@+id/action_createGameFragment3_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_cardFragment_to_foundGameFragment"
+            app:destination="@id/foundGameFragment" />
     </fragment>
 
 </navigation>

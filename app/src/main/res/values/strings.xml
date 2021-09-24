@@ -1,10 +1,15 @@
 <resources>
-    <string name="app_name">Teammate</string>
+    <string name="app_name">TeamMeet</string>
 
-    <string name="profile_find_game">Найти игру</string>
-    <string name="profile_create_game">Создать игру</string>
-    <string name="description_content">Not found image</string>
-    <string name="profile_not_found_game">У вас пока нет игр</string>
-    <string name="share"><u>Позвать на игру</u></string>
-    <string name="remove_game"><u>Удалить игру</u></string>
+    <string name="profile_main">Головна</string>
+    <string name="profile_find_game">Пошук гри</string>
+    <string name="profile_create_game">Створити запит</string>
+    <string name="description_content">Не знайдено</string>
+    <string name="found_game">Знайдені ігри</string>
+    <string name="profile_not_found_game">У вас наразі немає ігр</string>
+
+    <string name="share"><u>Позвати на гру</u></string>
+    <string name="remove_game"><u>Видалити гру</u></string>
+    <string name="find_game">Пошук гри</string>
+    <string name="card_fragment">Запити на гру</string>
 </resources>

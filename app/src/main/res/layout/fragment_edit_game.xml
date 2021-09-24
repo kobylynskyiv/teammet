@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:background="@color/background"
     android:layout_height="match_parent"
-    tools:context=".ui.find.ItemGameEditFragment">
+    tools:context=".presenter.ui.find.ItemGameEditFragment">
 
     <ScrollView
         android:layout_height="0dp"

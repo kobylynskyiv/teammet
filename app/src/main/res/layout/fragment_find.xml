@@ -1,125 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".ui.find.FindGameFragment">
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editTextSport"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:backgroundTint="@color/background"
-        android:hint="Спорт"
-        android:clickable="true"
-        android:focusable="true"
-        android:textColorHint="@color/black"
-        app:boxBackgroundColor="@color/background"
-        app:boxBackgroundMode="outline"
-        app:boxCollapsedPaddingTop="10dp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp"
-        app:boxStrokeWidth="1dp"
-        android:focusableInTouchMode="false"
-        app:boxStrokeWidthFocused="1dp"
-        app:errorTextColor="@color/black"
-        app:expandedHintEnabled="false"
-        app:hintTextAppearance="@style/TextAppearance.AppCompat"
-        app:layout_constraintBottom_toTopOf="@+id/findGame"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText"
-        android:touchscreenBlocksFocus="true"
-        tools:layout_editor_absoluteX="10dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/sport"
-            android:focusable="false"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Вид спорта" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editTextCity"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:backgroundTint="@color/background"
-        android:hint="Город"
-        android:clickable="true"
-        android:focusable="true"
-        android:textColorHint="@color/black"
-        app:boxBackgroundColor="@color/background"
-        app:boxBackgroundMode="outline"
-        app:boxCollapsedPaddingTop="10dp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp"
-        app:boxStrokeWidth="1dp"
-        app:boxStrokeWidthFocused="1dp"
-        app:errorTextColor="@color/black"
-        app:expandedHintEnabled="false"
-        app:hintAnimationEnabled="true"
-        app:hintTextAppearance="@style/TextAppearance.AppCompat"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSport"
-        tools:ignore="HardcodedText"
-        tools:layout_editor_absoluteX="10dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/city"
-            android:focusable="false"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Город" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/findGame"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@drawable/circle"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        android:backgroundTint="#262626"
-        android:text="@string/profile_find_game"
-        android:textAllCaps="false"
-        android:layout_marginBottom="20dp"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    tools:context=".presenter.ui.find.FindGameFragment">
 
 
     <TextView
-        android:id="@+id/error"
-        android:visibility="gone"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textSize="12sp"
-        android:text="Заполните все обязательные поля"
-        android:layout_marginStart="20dp"
-        android:textColor="#FF0000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCity" />
+        android:layout_gravity="top"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="Оберіть тип гри, який вас цікавить, в нашому наборі доступно три типи: мобільні, компьютерні, спортивні"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="2"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        app:fastScrollEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:listitem="@layout/item_type_games"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/findGame"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

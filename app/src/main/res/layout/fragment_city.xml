@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/background"
     android:layout_height="match_parent"
-    tools:context=".ui.city.CityFragment">
+    tools:context=".presenter.ui.city.CityFragment">
 
 
     <androidx.cardview.widget.CardView
